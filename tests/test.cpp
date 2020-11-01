@@ -27,7 +27,7 @@ TEST(Task1, Middle) {
   EXPECT_NEAR(result, 0, std::numeric_limits<float>::epsilon());
 }
 
-/*TEST(Task2, MinimunAndMaximum) {
+TEST(Task2, MinimunAndMaximum) {
   std::vector<float> v = {1, 2, 3, 4, 5, 0};
   auto pair = minMax(v);
   EXPECT_NEAR(pair.first, 0, std::numeric_limits<float>::epsilon());
@@ -117,6 +117,7 @@ TEST(Task5, RemoveFirstNegativeElement) {
   EXPECT_EQ(test, true);
   EXPECT_EQ(removed_element, -2);
   // только неотрицательные элементы
+  removed_element = 0;
   std::vector<int> v2 = {11, 2, 0, 47, 5, 53, 56};
   std::vector<int> result2 = {11, 2, 0, 47, 5, 53, 56};
   test = remove_first_negative_element(v2, removed_element);
@@ -131,6 +132,7 @@ TEST(Task5, RemoveFirstNegativeElement) {
   EXPECT_EQ(test, true);
   EXPECT_EQ(removed_element, -111);
   // пустой массив
+  removed_element=0;
   std::vector<int> v4 = {};
   std::vector<int> result4 = {};
   test = remove_first_negative_element(v4, removed_element);
@@ -210,4 +212,4 @@ TEST(Task8, Join) {
   std::string str4 = join(arr4, "...");
   std::string result4 = "Can...you...can...a...can...as...a...canner...can...can...a...can?";
   EXPECT_EQ(result4, str4);
-}*/
+}
